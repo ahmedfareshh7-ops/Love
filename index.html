@@ -304,20 +304,24 @@
             </div>
 
             <div class="gallery" id="memoriesGallery">
+                <!-- الذكرى الأولى -->
                 <div class="memory-card">
-                    <img src="63eda06b-9b8b-4357-8a1c-685acf066eb9.jpg" alt="Memory 1">
+                    <img src="63eda06b-9b8b-4357-8a1c-685acf066eb9.jpeg" onerror="this.src='IMG_7331.png'" alt="Memory 1">
                     <p>Your smile that lights up my world 🌸</p>
                 </div>
+                <!-- الذكرى الثانية -->
                 <div class="memory-card">
-                    <img src="2f0defc4-3b29-4ac5-a429-9f8688426a72.jpg" alt="Memory 2">
+                    <img src="2f0defc4-3b29-4ac5-a429-9f8688426a72.jpeg" onerror="this.src='IMG_7014.png'" alt="Memory 2">
                     <p>The first time we met ✨</p>
                 </div>
+                <!-- الذكرى الثالثة (معرض صور متقلب) -->
                 <div class="memory-card">
                     <div class="slider-container">
                         <div class="slider-wrapper" id="sliderWrapper">
-                            <div class="slider-slide"><img src="f00d5b0b-eee5-4eb9-8dd1-b9e51b1c98c1.jpg" alt="Mem 3A"></div>
-                            <div class="slider-slide"><img src="IMG_7014.png" alt="Mem 3B"></div>
-                            <div class="slider-slide"><img src="IMG_4548.jpeg" alt="Mem 3C"></div>
+                            <div class="slider-slide"><img src="f00d5b0b-eee5-4eb9-8dd1-b9e51b1c98c1.jpeg" alt="Mem 3A"></div>
+                            <div class="slider-slide"><img src="84908e78-6e5f-4e43-8e7f-4e3e79ca56db.jpeg" alt="Mem 3B"></div>
+                            <div class="slider-slide"><img src="IMG_7014.png" alt="Mem 3C"></div>
+                            <div class="slider-slide"><img src="IMG_4548.jpeg" alt="Mem 3D"></div>
                         </div>
                     </div>
                     <div style="margin-top:10px; display:flex; justify-content:center; gap:15px;">
@@ -503,7 +507,7 @@
         }
 
         let currentSlide = 0;
-        const slidesCount = 3;
+        const slidesCount = 4; // عدد الصور في السلايدر أصبح 4
         function moveSlide(direction) {
             currentSlide += direction;
             if (currentSlide < 0) currentSlide = slidesCount - 1;
@@ -513,3 +517,4 @@
     </script>
 </body>
 </html>
+ 
