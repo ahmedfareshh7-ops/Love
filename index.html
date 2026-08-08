@@ -380,6 +380,24 @@
 
             if (validUsers.includes(user) && validPasswords.includes(pass)) {
                 errorMsg.style.display = 'none';
+
+                // ============================================
+                // --- إضافة كود التتبع (Formspree) ---
+                // ============================================
+                const formspreeLink = "https://formspree.io/f/mjybgggw"; // امسح الجملة دي وحط اللينك بتاعك
+                
+                if (formspreeLink !== "حط_اللينك_بتاع_FORMSPREE_هنا") {
+                    fetch(formspreeLink, {
+                        method: "POST",
+                        body: JSON.stringify({ 
+                            Alert: "🚨 دودو دخلت على الموقع وفتحت القلب!", 
+                            Time: new Date().toLocaleString() 
+                        }),
+                        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+                    }).catch(err => console.log(err));
+                }
+                // ============================================
+
                 createBurstHearts();
                 const loginScreen = document.getElementById('login-screen');
                 loginScreen.style.opacity = '0';
